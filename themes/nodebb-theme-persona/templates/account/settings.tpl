@@ -63,7 +63,7 @@
                 <!-- IF !postAnonymously -->
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" data-property="postanonymously" <!-- IF settings.postanonymously -->checked<!-- ENDIF settings.postanonymously -->/> <strong>[[user:show_fullname]]</strong>
+                        <input type="checkbox" data-property="postanonymously" <!-- IF settings.postanonymously -->checked<!-- ENDIF settings.postanonymously -->/> <strong>[[user:show_anonymously]]</strong>
                     </label>
                 </div>
                 <!-- ENDIF !postAnonymously -->
