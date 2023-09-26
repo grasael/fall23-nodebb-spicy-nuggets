@@ -24,14 +24,16 @@ module.exports = function (Posts) {
 
         userData.forEach((userData, index) => {
             userData.signature = validator.escape(String(userData.signature || ''));
-            userData.fullname = userSettings[index].showfullname ? validator.escape(String(userData.fullname || '')) : undefined;
+            userData.fullname = (userSettings[index].showfullname && !userData.postanonymously) ? validator.escape(String(userData.fullname || '')) : undefined;
             userData.selectedGroups = [];
 
             if (meta.config.hideFullname) {
                 userData.fullname = undefined;
             }
 
-            if(meta.config.postan)
+            if(userData.postanonymously) {
+                userData.fullname = "Anonymous";
+            }
         });
 
         const result = await Promise.all(userData.map(async (userData) => {
