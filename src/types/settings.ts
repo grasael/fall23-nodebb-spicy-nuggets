@@ -6,8 +6,8 @@ export type SettingsObject = {
   topicPostSort: string;
   openOutgoingLinksInNewTab: boolean;
   dailyDigestFreq: string;
+  showfullname: boolean,
   postanonymously: boolean;
-  isAnon: boolean;
   followTopicsOnCreate: boolean;
   followTopicsOnReply: boolean;
   restrictChat: boolean;

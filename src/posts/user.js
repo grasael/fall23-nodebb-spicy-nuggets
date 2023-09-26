@@ -30,6 +30,8 @@ module.exports = function (Posts) {
             if (meta.config.hideFullname) {
                 userData.fullname = undefined;
             }
+
+            if(meta.config.postan)
         });
 
         const result = await Promise.all(userData.map(async (userData) => {
