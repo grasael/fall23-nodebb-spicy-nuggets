@@ -6,6 +6,7 @@
         </a>
     </div>
 
+<!-- references https://community.nodebb.org/topic/7058/show-full-name-instead-of-username-if-available/3 -->
     <small class="pull-left">
         <strong>
             <a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}"><!-- IF posts.user.fullname -->{posts.user.fullname}<!-- ELSE -->{posts.user.username}<!-- ENDIF posts.user.fullname --></a>
