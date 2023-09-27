@@ -30,7 +30,7 @@ export default function (Posts: any) {
             userData.selectedGroups = [];
 
             if (meta.config.hideFullname) {
-                userData.fullname = undefined;
+                userData.fullname = "Anonymous";
             }
         });
 
