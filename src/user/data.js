@@ -185,6 +185,14 @@ module.exports = function (User) {
                 ['showfullname']
             ));
         }
+    
+        if(meta.config.showAnonymousAsDisplayName) {
+            const uids = users.map(user => user.uid);
+            uidToSettings = _.zipObject(uids, await db.getObjectsFields(
+                uids.map(uid => `user:${uid}:settings`),
+                ['postanonymously']
+            ));
+        }
 
         await Promise.all(users.map(async (user) => {
             if (!user) {
