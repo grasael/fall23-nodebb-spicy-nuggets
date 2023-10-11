@@ -125,6 +125,9 @@
 	"already-bookmarked": "You have already bookmarked this post",
 	"already-unbookmarked": "You have already unbookmarked this post",
 
+	"already-endorsed": "You have already endorsed this post",
+	"already-unendorsed": "You have already unendorsed this post",
+
 	"cant-ban-other-admins": "You can't ban other admins!",
 	"cant-mute-other-admins": "You can't mute other admins!",
 	"user-muted-for-hours": "You have been muted, you will be able to post in %1 hour(s)",
