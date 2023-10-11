@@ -289,20 +289,6 @@ define('forum/topic/postTools', [
         });
     }
 
-    async function onEndorseClicked(button, pid) {
-        const isEndorsed = button.attr('data-endorsed');
-        const method = isEndorsed === 'false' || isEndorsed === '' ? 'put' : 'del';
-
-        api[method](`/posts/${pid}/endorse`, undefined, function (err) {
-            if (err) {
-                return alerts.error(err);
-            }
-            const type = method === 'put' ? 'endorse' : 'unendorse';
-            hooks.fire(`action:post.${type}`, { pid: pid });
-        });
-        return false;
-    }
-
     async function onQuoteClicked(button, tid) {
         const selectedNode = await getSelectedNode();
 
