@@ -116,6 +116,7 @@ module.exports = function (Topics) {
         }
         const [
             bookmarks,
+            endorsed,
             voteData,
             userData,
             editors,
@@ -123,6 +124,7 @@ module.exports = function (Topics) {
         ] = await Promise.all([
             posts.hasBookmarked(pids, uid),
             posts.getVoteStatusByPostIDs(pids, uid),
+            posts.hasEndorsed(pids, uid),
             getPostUserData('uid', async uids => await posts.getUserInfoForPosts(uids, uid)),
             getPostUserData('editor', async uids => await user.getUsersFields(uids, ['uid', 'username', 'userslug'])),
             getPostReplies(pids, uid),
@@ -135,6 +137,7 @@ module.exports = function (Topics) {
                 postObj.editor = postObj.editor ? editors[postObj.editor] : null;
                 postObj.bookmarked = bookmarks[i];
                 postObj.upvoted = voteData.upvotes[i];
+                postObj.endorsed = endorsed[i];
                 postObj.downvoted = voteData.downvotes[i];
                 postObj.votes = postObj.votes || 0;
                 postObj.replies = replies[i];
