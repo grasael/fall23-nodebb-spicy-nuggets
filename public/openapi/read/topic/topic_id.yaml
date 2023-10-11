@@ -182,8 +182,6 @@ get:
                           properties:
                             hasMore:
                               type: boolean
-                            endorsed:
-                              type: boolean
                             users:
                               type: array
                               items:
