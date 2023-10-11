@@ -4,4 +4,4 @@
     hidden
     <!-- ENDIF !posts.endorsed -->
 >
-    ~ An instructor ({posts.endorsedBy}) endorsed this post ~
+    ~ An instructor has endorsed this post ~
