@@ -4,5 +4,5 @@
         hidden
     <!-- ENDIF !posts.endorsed -->
 >
-    An instructor has endorsed this post
+    <b>An instructor has endorsed this post.</b>
 </p>
